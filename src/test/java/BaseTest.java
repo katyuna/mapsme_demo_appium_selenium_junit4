@@ -4,11 +4,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     protected static URL url;
     protected static DesiredCapabilities capabilities;
-    protected AndroidDriver driver;
+    protected static AndroidDriver driver;
 
     @BeforeClass
     public static void before() throws MalformedURLException {
@@ -24,5 +25,8 @@ public class BaseTest {
         //app
         capabilities.setCapability("appPackage", "com.mapswithme.maps.pro.kode.debug");
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
+
+        driver = new AndroidDriver(url, capabilities);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 }
