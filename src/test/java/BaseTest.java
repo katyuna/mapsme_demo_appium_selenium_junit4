@@ -12,7 +12,7 @@ public class BaseTest {
     protected static AndroidDriver driver;
 
     @BeforeClass
-    public static void before() throws MalformedURLException {
+    public static void setUp() throws MalformedURLException {
         url = new URL("http://127.0.0.1:4723/wd/hub");
         capabilities = new DesiredCapabilities();
         //Platform
