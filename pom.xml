@@ -17,14 +17,15 @@
     </properties>
     <dependencies>
     <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <!-- io.appium java-client 8.1.1 already include selenium 4-->
     <dependency>
         <groupId>io.appium</groupId>
         <artifactId>java-client</artifactId>
-        <version>7.6.0</version>
+        <version>8.1.1</version>
         <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-        <dependency>
+      <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.2.1</version>

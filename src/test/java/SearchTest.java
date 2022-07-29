@@ -17,7 +17,6 @@ public class SearchTest extends BaseTest {
         MainScreen mainScreen = new MainScreen(driver);
         SearchBottomSheet searchBottomSheet = new SearchBottomSheet(driver);
         mainScreen.clickSearchButton();
-        mainScreen.clickSearchButton();
         boolean isSearchSheetDisplayed = searchBottomSheet.isSearchCategoriesConteiner();
         assertTrue("Error: search category bottom sheet doesn't displays", isSearchSheetDisplayed);
         searchBottomSheet.clickCloseButton();

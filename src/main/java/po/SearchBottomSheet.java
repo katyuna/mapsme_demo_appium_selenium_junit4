@@ -1,9 +1,9 @@
 package po;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class SearchBottomSheet {
@@ -19,11 +19,11 @@ public class SearchBottomSheet {
 
     //Search categories sheet header
     @AndroidFindBy(xpath = ".//android.view.View[@resource-id='search_categories_container']")
-    private AndroidElement searchCategoriesConteiner;
+    private WebElement searchCategoriesConteiner;
 
     //[Х]
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.widget.Button")
-    private AndroidElement closeSearchCategoriesSheetButton;
+    private WebElement closeSearchCategoriesSheetButton;
 
 
     //Is Search categories sheet header displayed
